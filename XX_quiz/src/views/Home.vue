@@ -1,6 +1,12 @@
 <template>
   <div class="home">
-    <Question :question="questionItem.question" v-on:answer="(v) => answer(v)"/>
+    <template v-for="questionItem in questions" :key="questionItem.id">
+      <Question
+        :question="questionItem.question"
+        v-if="questionItem.id === questionId"
+        v-on:answer="(v) => answer(v)"
+      />
+    </template>
   </div>
 </template>
 
@@ -15,11 +21,12 @@ export default {
   data() {
     return {
       questionId: 1,
+      answers: [],
     };
   },
   computed: {
-    questionItem() {
-      return this.$store.getters.questionById(this.questionId);
+    questions() {
+      return this.$store.state.quiz;
     },
   },
   methods: {

@@ -134,7 +134,7 @@ The `npm run serve` will start a web server with [Hot reloading](https://vue-loa
 
 If you enter the URL `http://localhost:8080` into your browser you should be presented with the Vue standard app!
 
-![Standard Vue App](XX_assets/10_standard_vue_app.PNG?raw=true "Standard Vue App")
+![Standard Vue App](https://raw.githubusercontent.com/Kansuler/vue3-introduction-course/master/XX_assets/10_standard_vue_app.PNG)
 
 The possible commands you can run in the projects are.
 

@@ -62,8 +62,8 @@ export default {
     };
   },
   computed: {
-    questionItem() {
-      return this.$store.getters.questionById(this.questionId);
+    questions() {
+      return this.$store.state.quiz;
     },
   },
 };
@@ -74,5 +74,5 @@ Above you see that we added a [computed property](https://v3.vuejs.org/guide/com
 
 We then form a basic data binding with text interpolation using the "Mustache" syntax `{{questionItem.question}}`. You should now see the following on your website:
 
-![First Question](XX_assets/20_first_question.PNG?raw=true)
+![First Question](https://raw.githubusercontent.com/Kansuler/vue3-introduction-course/master/XX_assets/20_first_question.PNG)
 
